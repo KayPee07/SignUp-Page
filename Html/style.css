@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    /* color: #fff; */
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    padding: 10px;
+}
+img{
+    width: 100px;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 25px;
+    background: linear-gradient(150deg, #cde0d1ca, #35364d);
+    backdrop-filter: blur(1px);
+}
+
+.heading{
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    text-align: center; 
+    text-shadow: 1px 1px 2px rgb(241, 241, 229);
+    padding: 0 0 20px 0;
+}
+.heading::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(150deg, #bbd4c1, rgb(123, 204, 147));
+}
+.card-details{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card-box{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+}
+.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card-details .card-box input{
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+}
+.card-details .card-box input:focus{
+    background: rgb(228, 230, 222);
+}
+.button{
+    text-align: center;
+}
+.button input{
+    padding: 10px 0;
+    margin-top: 10px;
+    height: 100%;
+    width: 50%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #bdd6dd, #556652ca);
+    cursor: pointer;
+}
+.button input:hover{
+    background: linear-gradient(-150deg, #bdd6dd, #556652ca);
+}
+.button input:active{
+    background: linear-gradient(50deg, #bdd6dd, #556652ca);
+}
+.account-tag{
+    margin: 10px;
+    text-align: center;
+}
+a{
+    color: #e0e408;
+}
+a:hover{
+    color: rgba(208, 230, 13, 0.815);
+}
+@media(max-width:600px){
+    .container{
+        max-width: 100%;
+    }
+    .card-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .card-details{
+        max-height: 200px;
+        overflow: scroll;
+    }
+    .button input:hover{
+        background: linear-gradient(-150deg, #11b9ec, #24e00bca);
+    }
+}
